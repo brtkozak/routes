@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"../dto"
+	"github.com/brtkozak/routes/dto"
 )
 
 func TestConvertStringToCoordinates(t *testing.T) {

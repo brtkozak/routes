@@ -3,7 +3,7 @@ package api
 import (
 	"sort"
 
-	"../dto"
+	"github.com/brtkozak/routes/dto"
 )
 
 //sort routes by duration - if equal then compare distance

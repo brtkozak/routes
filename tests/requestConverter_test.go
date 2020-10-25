@@ -3,8 +3,8 @@ package tests
 import (
 	"testing"
 
-	"../api"
-	"../dto"
+	"github.com/brtkozak/routes/api"
+	"github.com/brtkozak/routes/dto"
 )
 
 func TestgetRoutesRequest(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"./api"
+	"github.com/brtkozak/routes/api"
 	"github.com/gorilla/mux"
 )
 

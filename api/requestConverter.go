@@ -1,7 +1,7 @@
 package api
 
 import (
-	"../dto"
+	"github.com/brtkozak/routes/dto"
 )
 
 const (

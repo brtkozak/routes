@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"../dto"
+	"github.com/brtkozak/routes/dto"
 )
 
 const (
@@ -22,7 +22,7 @@ func GetRoutes(routesRequest dto.RoutesRequest) (dto.RoutesResponse, *dto.Reques
 	}
 
 	// Using wait group to get distance from osrm service for every destination
-	// Modify routesResponse by passing routes slice as a reference
+	// Modify routesResponse by passing pointer to routes slice
 	// When all request are done return routeResponse
 	var wg sync.WaitGroup
 	var errorOccured *dto.RequestError
@@ -85,7 +85,7 @@ func getDistance(src string, dst dto.Coordinates, routes *[]dto.Route) *dto.Requ
 		return nil
 	}
 
-	// build new Route struct and add it to the slice passed by reference
+	// build new Route struct and add it to the slice passed by pointer
 	newRoute := dto.Route{
 		Destination: dstAsString,
 		Duration:    osrmResponse.Routes[0].Duration,

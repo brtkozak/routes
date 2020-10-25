@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"../osrmservice"
+	"github.com/brtkozak/routes/osrmservice"
 )
 
 func GetRoutes(w http.ResponseWriter, r *http.Request) {
